@@ -25,9 +25,9 @@ def predict():
     output = model.predict(df)
         
     if output == 1:
-        res_val = '<p id="h1forsafe">** heart disease **</p>'
+        res_val = '<div id="h1forsafe">** heart disease **</div>'
     else:
-        res_val = '<p id="h1fornotsafe"> no heart disease </p>'
+        res_val = '<div id="h1fornotsafe"> no heart disease </div>'
         
 
     return render_template('index.html', prediction_text='Patient has {}'.format(res_val))
